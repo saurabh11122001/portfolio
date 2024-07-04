@@ -12,7 +12,7 @@ function toggleMenu() {
   })
 }
 
-function animate(){
+
   // page 1
   tl.from(".logo",{
     y:100,
@@ -60,9 +60,10 @@ function animate(){
     opacity: 0,
     stagger:0.2,
     scrollTrigger:{
-      trigger:".about-section .para",
+      trigger:".about-section .ab",
       scroller:"body",
-      end:"top 70%",
+      start:"top 90%",
+      // markers:true,
       scrub:5
     }
   })
@@ -154,7 +155,6 @@ function animate(){
   })
 
 
-}
-animate();
+
 
 
