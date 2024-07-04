@@ -19,6 +19,17 @@
   #hamburger-nav {
     display: flex;
   }
+  .article-container{
+    position: relative;
+  }
+  .project-title1{
+    top:20%;
+    height: 50%;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   #experience,
   .experience-details-container {
     margin-top: 2rem;
