@@ -10,18 +10,18 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">John Doe</div>
-      <div>
+      <div class="logo ">Saurabh Singh Rautela</div>
+      <div class="list">
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a class="text-xl" href="#about">About</a></li>
+          <li><a class="text-xl" href="#experience">Experience</a></li>
+          <li><a class="text-xl" href="#projects">Projects</a></li>
+          <li><a class="text-xl" href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">John Doe</div>
+      <div class="logo">Saurabh Singh Rautela</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -37,17 +37,17 @@
       </div>
     </nav>
     <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+      <div class="pf-pic section__pic-container">
+        <img src="./assets/image.png" alt="saurabh profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">John Doe</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <p class="bio section__text__p1">Hello, I'm</p>
+        <h1 class=" bio title">Saurabh</h1>
+        <p class=" bio section__text__p2">Full Stack Developer</p>
         <div class="btn-container">
           <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+            class="btn btn-color-2 cv-btn"
+            onclick="window.open('./assets/CVnew.docx')"
           >
             Download CV
           </button>
@@ -59,25 +59,25 @@
           <img
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
+            class="icon icon-1"
+            onclick="location.href='https://www.linkedin.com/in/saurabh-singh-rautela-90382a23b'"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/'"
+            onclick="location.href='https://github.com/saurabh11122001'"
           />
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
+    <section id="about"class="about-section">
+      <p class="ab section__text__p1">Get To Know More</p>
+      <h1 class="ab2 title">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
+        <div class="section__pic-container pic-2">
           <img
-            src="./assets/about-pic.png"
+            src="./assets/second.png"
             alt="Profile picture"
             class="about-pic"
           />
@@ -91,7 +91,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+              <p>1+ years <br />Backend Development</p><p>& Aspiring Machine Learning </p>
             </div>
             <div class="details-container">
               <img
@@ -100,18 +100,13 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+              <p>B.C.A Bachelors Degree<br />M.C.A Masters Degree</p>
             </div>
           </div>
           <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
+            <p class="para">
+              "Hi, I'm Saurabh, a passionate and dedicated Backend Developer with a knack for creating innovative solutions.
+              "I began my journey in Web Development and Machine Learning with a strong interest in Backend Development .
           </div>
         </div>
       </div>
@@ -122,9 +117,9 @@
         onclick="location.href='./#experience'"
       />
     </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+    <section id="experience" class="experience-sec">
+      <p class="ex1 section__text__p1">Explore My</p>
+      <h1 class="ex2 title">Experience</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
@@ -159,7 +154,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>SASS</h3>
+                  <h3>JavaScript</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -170,7 +165,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>JavaScript</h3>
+                  <h3>ReactJs</h3>
                   <p>Basic</p>
                 </div>
               </article>
@@ -181,25 +176,14 @@
                   class="icon"
                 />
                 <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
+                  <h3>Tailwind</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
                 <img
@@ -208,8 +192,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
+                  <h3>MySql</h3>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -245,6 +229,18 @@
                   <p>Intermediate</p>
                 </div>
               </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MongoDb</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
             </div>
           </div>
         </div>
@@ -256,42 +252,48 @@
         onclick="location.href='./#projects'"
       />
     </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
+    <section id="projects"class="project-section">
+      <p class="pro1 section__text__p1">Browse My Recent</p>
+      <h1 class="pro2 title">Projects</h1>
+      <div class="experience-details-container project">
+        <div class="about-containers about-3 ">
+          <div class="details-container pro-1 color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
+                src="./assets/Project1.png"
                 alt="Project 1"
                 class="project-img"
               />
+              <div class="project-title1">
+                <span>Chat Web Application</span>
+              </div>
             </div>
             <h2 class="experience-sub-title project-title">Project One</h2>
             <div class="btn-container">
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                class="btn btn-color-2 project-btn button-project"
+                onclick="location.href='https://github.com/saurabh11122001'"
               >
                 Github
               </button>
               <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                class="btn btn-color-2 project-btn button-project"
+                onclick=""
               >
                 Live Demo
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <div class="details-container pro-2 color-container">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
+                src="./assets/project2.png"
                 alt="Project 2"
                 class="project-img"
               />
+              <div class="project-title1">
+                <span>Tinder Frontend for Phone</span>
+              </div>
             </div>
             <h2 class="experience-sub-title project-title">Project Two</h2>
             <div class="btn-container">
@@ -303,13 +305,13 @@
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://saurabh11122001.github.io/Tinder/'"
               >
                 Live Demo
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
+          <!-- <div class="details-container pro-3 color-container">
             <div class="article-container">
               <img
                 src="./assets/project-3.png"
@@ -332,7 +334,7 @@
                 Live Demo
               </button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <img
@@ -342,9 +344,9 @@
         onclick="location.href='./#contact'"
       />
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+    <section id="contact" class="contact">
+      <p class="con1 section__text__p1">Get in Touch</p>
+      <h1 class="con2 title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
@@ -352,7 +354,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+          <p><a href="mailto:saurabhrautela2001@gmail.com">saurabhrautela2001@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -360,7 +362,7 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/saurabh-singh-rautela-90382a23b">LinkedIn</a></p>
         </div>
       </div>
     </section>
@@ -375,8 +377,10 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+      <p>Copyright &#169; 2024 @srautela. All Rights Reserved.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
   </body>
-</html>
+  </html>

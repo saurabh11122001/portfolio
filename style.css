@@ -9,6 +9,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: rgb(39, 38, 38);
+  color: white;
 }
 
 html {
@@ -46,7 +48,7 @@ nav {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
   text-decoration-color: white;
 }
@@ -175,6 +177,17 @@ section {
   width: 400px;
   margin: auto 0;
 }
+.pf-pic{
+  border-radius:50%;
+  overflow: hidden;
+  background-color: rgb(209, 208, 208);
+  translate: none;
+  rotate: none;
+  scale: none; 
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
 
 .section__text {
   align-self: center;
@@ -211,8 +224,9 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  background-color:white;
+  border-radius: 100%;
 }
-
 /* BUTTONS */
 
 .btn-container {
@@ -260,6 +274,9 @@ section {
 .btn-container {
   gap: 1rem;
 }
+.cv-btn{
+  background-color:white;
+}
 
 /* ABOUT SECTION */
 
@@ -277,6 +294,7 @@ section {
   justify-content: center;
   flex-direction: column;
 }
+
 
 .about-containers,
 .about-details-container {
@@ -296,10 +314,10 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: rgb(64, 61, 61);
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border-color: rgb(48, 48, 48);
   text-align: center;
 }
 
@@ -358,10 +376,23 @@ article .icon {
 #projects {
   position: relative;
 }
-
+.project-title1{
+  position: absolute;
+  background-color: white;
+  width: 60%;
+  height: 15%;
+  top: 30%;
+  opacity: 70%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 700;
+}
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  border-color: rgb(73, 72, 72);
+  background: rgb(64, 61, 61);
 }
 
 .project-img {
@@ -372,11 +403,11 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: white;
 }
 
 .project-btn {
-  color: black;
+  color: rgb(105, 102, 102);
   border-color: rgb(163, 163, 163);
 }
 
