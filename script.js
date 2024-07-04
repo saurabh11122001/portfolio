@@ -12,7 +12,8 @@ function toggleMenu() {
   })
 }
 
-
+window.onload = function() {
+  gsap.registerPlugin(ScrollTrigger);
   // page 1
   tl.from(".logo",{
     y:100,
@@ -63,7 +64,6 @@ function toggleMenu() {
       trigger:".about-section .ab",
       scroller:"body",
       start:"top 90%",
-      // markers:true,
       scrub:5
     }
   })
@@ -158,3 +158,4 @@ function toggleMenu() {
 
 
 
+}
