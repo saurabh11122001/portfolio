@@ -62,6 +62,7 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+
 }
 
 .logo:hover {
@@ -77,6 +78,7 @@ a:hover {
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  z-index: 1;
 }
 
 .hamburger-icon {
@@ -85,6 +87,7 @@ a:hover {
   justify-content: space-between;
   height: 24px;
   width: 30px;
+  background-color: white;
   cursor: pointer;
 }
 
