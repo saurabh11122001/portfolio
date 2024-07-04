@@ -375,6 +375,7 @@ article .icon {
 
 #projects {
   position: relative;
+  overflow-x: hidden;
 }
 .project-title1{
   position: absolute;
