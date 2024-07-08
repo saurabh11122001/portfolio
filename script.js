@@ -1,4 +1,4 @@
-
+// locomotive setup
 tl=gsap.timeline()
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");

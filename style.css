@@ -9,7 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(39, 38, 38);
+  background-color: rgb(84, 83, 83);
   color: white;
 }
 
@@ -203,10 +203,12 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  color: rgb(172, 168, 168);
 }
 
 .section__text__p2 {
   font-size: 1.75rem;
+  color: rgb(172, 168, 168);
   margin-bottom: 1rem;
 }
 

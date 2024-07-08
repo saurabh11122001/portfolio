@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saurabh's Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saurabh's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <div id="main" data-scroll-container>
     <nav id="desktop-nav">
       <div class="logo ">Saurabh Singh Rautela</div>
       <div class="list">
@@ -45,10 +48,7 @@
         <h1 class=" bio title">Saurabh</h1>
         <p class=" bio section__text__p2">Full Stack Developer</p>
         <div class="btn-container">
-          <button
-            class="btn btn-color-2 cv-btn"
-            onclick="window.open('./assets/CVnew.docx')"
-          >
+          <button class="btn btn-color-2 cv-btn" onclick="window.open('./assets/CVnew.docx')">
             Download CV
           </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
@@ -56,66 +56,44 @@
           </button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon icon-1"
-            onclick="location.href='https://www.linkedin.com/in/saurabh-singh-rautela-90382a23b'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/saurabh11122001'"
-          />
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon icon-1"
+            onclick="location.href='https://www.linkedin.com/in/saurabh-singh-rautela-90382a23b'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon"
+            onclick="location.href='https://github.com/saurabh11122001'" />
         </div>
       </div>
     </section>
-    <section id="about"class="about-section">
+    <section id="about" class="about-section">
       <p class="ab section__text__p1">Get To Know More</p>
       <h1 class="ab2 title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container pic-2">
-          <img
-            src="./assets/second.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+          <img src="./assets/second.png" alt="Profile picture" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
               <h3>Experience</h3>
-              <p>1+ years <br />Backend Development</p><p>& Aspiring Machine Learning </p>
+              <p>1+ years <br />Backend Development</p>
+              <p>& Aspiring Machine Learning </p>
             </div>
             <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
               <h3>Education</h3>
               <p>B.C.A Bachelors Degree<br />M.C.A Masters Degree</p>
             </div>
           </div>
           <div class="text-container">
             <p class="para">
-              "Hi, I'm Saurabh, a passionate and dedicated Backend Developer with a knack for creating innovative solutions.
-              "I began my journey in Web Development and Machine Learning with a strong interest in Backend Development .
+              "Hi, I'm Saurabh, a passionate and dedicated Backend Developer with a knack for creating innovative
+              solutions.
+              "I began my journey in Web Development and Machine Learning with a strong interest in Backend Development
+              .
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
     </section>
     <section id="experience" class="experience-sec">
       <p class="ex1 section__text__p1">Explore My</p>
@@ -126,55 +104,35 @@
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>HTML</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>CSS</h3>
                   <p>Experienced</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>JavaScript</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>ReactJs</h3>
                   <p>Basic</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Tailwind</h3>
                   <p>Intermediate</p>
@@ -186,55 +144,35 @@
             <h2 class="experience-sub-title">Backend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>MySql</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Node JS</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Express JS</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>Git</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
                 <div>
                   <h3>MongoDb</h3>
                   <p>Intermediate</p>
@@ -245,68 +183,45 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
     </section>
-    <section id="projects"class="project-section">
+    <section id="projects" class="project-section">
       <p class="pro1 section__text__p1">Browse My Recent</p>
       <h1 class="pro2 title">Projects</h1>
       <div class="experience-details-container project">
         <div class="about-containers about-3 ">
           <div class="details-container pro-1 color-container">
             <div class="article-container">
-              <img
-                src="./assets/Project1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+              <img src="./assets/Project1.png" alt="Project 1" class="project-img" />
               <div class="project-title1">
                 <span>Chat Web Application</span>
               </div>
             </div>
             <h2 class="experience-sub-title project-title">Project One</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn button-project"
-                onclick="location.href='https://github.com/saurabh11122001'"
-              >
+              <button class="btn btn-color-2 project-btn button-project"
+                onclick="location.href='https://github.com/saurabh11122001'">
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn button-project"
-                onclick=""
-              >
+              <button class="btn btn-color-2 project-btn button-project" onclick="">
                 Live Demo
               </button>
             </div>
           </div>
           <div class="details-container pro-2 color-container">
             <div class="article-container">
-              <img
-                src="./assets/project2.png"
-                alt="Project 2"
-                class="project-img"
-              />
+              <img src="./assets/project2.png" alt="Project 2" class="project-img" />
               <div class="project-title1">
                 <span>Tinder Frontend for Phone</span>
               </div>
             </div>
             <h2 class="experience-sub-title project-title">Project Two</h2>
             <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
                 Github
               </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://saurabh11122001.github.io/Tinder/'"
-              >
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://saurabh11122001.github.io/Tinder/'">
                 Live Demo
               </button>
             </div>
@@ -337,31 +252,18 @@
           </div> -->
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
     </section>
     <section id="contact" class="contact">
       <p class="con1 section__text__p1">Get in Touch</p>
       <h1 class="con2 title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
           <p><a href="mailto:saurabhrautela2001@gmail.com">saurabhrautela2001@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
           <p><a href="https://www.linkedin.com/in/saurabh-singh-rautela-90382a23b">LinkedIn</a></p>
         </div>
       </div>
@@ -379,8 +281,14 @@
       </nav>
       <p>Copyright &#169; 2024 @srautela. All Rights Reserved.</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-  </body>
-  </html>
+  </div>
+</body>
+
+</html>
