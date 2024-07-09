@@ -99,7 +99,7 @@ window.onload = function() {
           scrub:5
         }
       })
-      tl.from(".project-section .pro-1",{
+      tl.from(".pro-1",{
         x:-300,
         duration:2,
         opacity: 0,
@@ -111,14 +111,38 @@ window.onload = function() {
           scrub:5
         }
       })
-      tl.from(".project-section .pro-2",{
+      tl.from(".pro-2",{
         x:300,
         duration:2,
         opacity: 0,
         stagger:0.7,
         
         scrollTrigger:{
-          trigger:".project-section .pro1",
+          trigger:".project-section .pro3",
+          scroller:"body",
+          scrub:5
+        }
+      })
+      tl.from(".pro-3",{
+        x:-200,
+        opacity: 0,
+        stagger:0.7,
+        
+        scrollTrigger:{
+          trigger:".pro-3",
+          scroller:"body",
+          scrub:5,
+          end:"top 20%"
+        }
+      })
+      tl.from(".pro-4",{
+        x:200,
+        duration:2,
+        opacity: 0,
+        stagger:0.7,
+        
+        scrollTrigger:{
+          trigger:".pro-3",
           scroller:"body",
           scrub:5
         }

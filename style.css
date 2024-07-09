@@ -9,7 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(84, 83, 83);
+  background-color: rgb(120, 118, 118);
   color: white;
 }
 
@@ -229,8 +229,6 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
-  background-color:white;
-  border-radius: 100%;
 }
 /* BUTTONS */
 
@@ -300,7 +298,12 @@ section {
   flex-direction: column;
 }
 
-
+ .details-container p{
+  color:rgb(176, 172, 172);
+}
+ .details-container h3{
+  color:rgb(255, 244, 244);
+}
 .about-containers,
 .about-details-container {
   display: flex;
@@ -314,6 +317,9 @@ section {
   position: absolute;
   right: -5rem;
   bottom: 2.5rem;
+}
+.text-container .para{
+  color:rgb(204, 199, 199);
 }
 
 .details-container {
@@ -355,7 +361,9 @@ section {
   justify-content: center;
   flex-direction: column;
 }
-
+.details-container .experience-sub-title{
+  color: white;
+}
 .article-container {
   display: flex;
   text-align: initial;
@@ -364,7 +372,9 @@ section {
   gap: 2.5rem;
   justify-content: space-around;
 }
-
+  .points h3,p{
+  color: rgb(191, 185, 185);
+}
 article {
   display: flex;
   width: 10rem;
@@ -395,6 +405,26 @@ article .icon {
   justify-content: center;
   color: black;
   font-weight: 700;
+}
+.title2{
+  position: relative;
+}
+.project-title2{
+  position: absolute;
+  background-color: white;
+  width: 70%;
+  height: 30%;
+  top: 30%;
+  opacity: 70%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .color-container {
   border-color: rgb(73, 72, 72);
