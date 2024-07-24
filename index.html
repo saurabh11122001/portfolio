@@ -47,10 +47,33 @@
         <p class="bio section__text__p1">Hello, I'm</p>
         <h1 class=" bio title">Saurabh</h1>
         <p class=" bio section__text__p2">Full Stack Developer</p>
-        <div class="btn-container">
-          <button class="btn btn-color-2 cv-btn" onclick="window.open('./assets/CVnew.docx')">
-            Download CV
-          </button>
+        <div class="btn-container" onclick="window.open('./assets/CVnew.docx')">
+          <div class="container">
+            <label class="label">
+              <input class="input" type="checkbox" />
+              <span class="circle"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  class="icon"
+                >
+                  <path
+                    d="M12 19V5m0 14-4-4m4 4 4-4"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke="currentColor"
+                  ></path>
+                </svg>
+                <div class="square"></div>
+              </span>
+              <p class="title">Download</p>
+              <p class="title">Open</p>
+            </label>
+          </div> 
+
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
