@@ -705,3 +705,6 @@ footer p {
     right: 56px;
   }
 }
+.logo, .list li, #profile .section__pic-container, .section__text .bio, .section__text .btn-container, #socials-container img, .about-section .ab, .ab2, .about-section div, .experience-sec .ex1, .experience-sec .ex2, .experience-sec div, .project-section .pro1, .project-section .pro2, .pro-1, .pro-2, .pro-3, .pro-4, .contact .con1, .contact .con1, .contact div {
+  visibility: hidden;
+}
