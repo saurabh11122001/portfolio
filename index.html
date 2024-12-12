@@ -1,329 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saurabh's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Mobile View adjustments */
+    @media (max-width: 768px) {
+      #hero img {
+        width: 200px; /* Adjust the width */
+        height: 200px; /* Adjust the height */
+      }
+
+      #nav-links {
+        display: none; /* Hide links on mobile */
+      }
+
+      #mobile-nav {
+        display: none; /* Mobile nav should be hidden by default */
+        background-color: #2d3748;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        transition: max-height 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      #mobile-nav.open {
+        display: block; /* Show when open */
+        max-height: 200px; /* Set max height when visible */
+      }
+
+      #mobile-nav a {
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      #mobile-nav a:hover {
+        color: #00bcd4; /* Hover color */
+      }
+
+      #menu-toggle {
+        z-index: 20; /* Keep hamburger above the mobile menu */
+      }
+    }
+  </style>
 </head>
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 fixed top-0 left-0 w-full z-50 shadow-md">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <!-- Logo or Title -->
+      <div id="title"class="text-white text-lg font-bold">My Portfolio</div>
+  
+      <!-- Hamburger Menu for Small Screens -->
+      <button id="menu-toggle" class="sm:hidden text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+  
+      <!-- Navigation Links (Visible on medium and larger screens) -->
+      <div id="nav-links" class="hidden lg:flex space-x-6 text-white">
+        <a href="#home" class="hover:text-cyan-400">Home</a>
+        <a href="#about" class="hover:text-cyan-400">About</a>
+        <a href="#skills" class="hover:text-cyan-400">Skills</a>
+        <a href="#projects" class="hover:text-cyan-400">Projects</a>
+        <a href="#contact" class="hover:text-cyan-400">Contact</a>
+      </div>
+    </div>
+  
+    <!-- Mobile Navigation Links (Initially hidden) -->
+    <div id="mobile-nav" class="hidden">
+      <a href="#home" class="block py-2 text-white hover:text-cyan-400">Home</a>
+      <a href="#about" class="block py-2 text-white hover:text-cyan-400">About</a>
+      <a href="#skills" class="block py-2 text-white hover:text-cyan-400">Skills</a>
+      <a href="#projects" class="block py-2 text-white hover:text-cyan-400">Projects</a>
+      <a href="#contact" class="block py-2 text-white hover:text-cyan-400">Contact</a>
+    </div>
+  </nav>
 
-<body>
-  <div id="main" data-scroll-container>
-    <nav id="desktop-nav">
-      <div class="logo ">Saurabh Singh Rautela</div>
-      <div class="list">
-        <ul class="nav-links">
-          <li><a class="text-xl" href="#about">About</a></li>
-          <li><a class="text-xl" href="#experience">Experience</a></li>
-          <li><a class="text-xl" href="#projects">Projects</a></li>
-          <li><a class="text-xl" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Saurabh Singh Rautela</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="pf-pic section__pic-container">
-        <img src="https://imgs.search.brave.com/CZdmK_7BX9T1R2HZ-93SjBtkTQZNOWQa3DkfuZUI0SM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9wcm9ncmFtbWVy/LWNvZGVyLXByb2dy/YW1taW5nLWNvbXB1/dGVyLXRleHQtY29k/ZS1wcm9ncmFtLXBv/cnRyYWl0LW1hbi13/b3JraW5nXzExOTc3/OTctMjE0NTE1Lmpw/Zz9zaXplPTYyNiZl/eHQ9anBn" alt="saurabh profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="bio section__text__p1">Hello, I'm</p>
-        <h1 class=" bio title">Saurabh</h1>
-        <p class=" bio section__text__p2">Full Stack Developer</p>
-        <div class="btn-container" onclick="window.open('./assets/Resume.pdf')">
-          <div class="container">
-            <label class="label">
-              <input class="input" type="checkbox" />
-              <span class="circle"
-                ><svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  class="icon"
-                >
-                  <path
-                    d="M12 19V5m0 14-4-4m4 4 4-4"
-                    stroke-width="1.5"
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke="currentColor"
-                  ></path>
-                </svg>
-                <div class="square"></div>
-              </span>
-              <p class="title">Download</p>
-              <p class="title">Open</p>
-            </label>
-          </div> 
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center bg-gray-900">
+    <div class="relative">
+      <img src="./profile.jpg" alt="Profile Picture" class="rounded-full border-4 border-gray-700 w-52 h-52 lg:h-80 lg:w-80 mx-auto">
+    </div>
+    <h1 class="text-5xl font-bold mt-6 text-center">Hi, I'm <span class="text-cyan-400">Saurabh Singh Rautela</span></h1>
+    <p class="text-lg text-gray-300 mt-4 text-center">A Passionate MERN Stack Developer & Designer</p>
+    <a href="SaurabhRautela_CV-3.pdf.pdf" download class="px-6 py-3 bg-cyan-400 text-gray-900 rounded-lg hover:bg-cyan-300 mt-6">Download CV</a>
+  
+    <!-- Social Media Icons (LinkedIn, GitHub, Instagram) -->
+    <div class="flex space-x-6 mt-6">
+      <a href="https://www.linkedin.com/in/saurabh-singh-rautela-90382a23b" target="_blank" class="w-12 h-12 flex justify-center items-center bg-cyan-400 rounded-full hover:bg-cyan-300">
+        <img src="https://img.freepik.com/free-psd/social-media-logo-design_23-2151296991.jpg?t=st=1733920240~exp=1733923840~hmac=b909d28c10733cff09e2789c29fe2bb95365a095d2233da2f2fa8dfa65587265&w=740" fill="currentColor" viewBox="0 0 24 24" class="w-full h-full rounded-full text-gray-900"/>
+      </a>
+      <a href="https://github.com/saurabh11122001" target="_blank" class="w-12 h-12 flex justify-center items-center bg-cyan-400 rounded-full hover:bg-cyan-300">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png" fill="currentColor" viewBox="0 0 24 24" class="w-full h-full rounded-full text-gray-900"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/saurabhrautela.11" target="_blank" class="w-12 h-12 flex justify-center items-center bg-cyan-400 rounded-full hover:bg-cyan-300">
+        <img src="https://img.freepik.com/free-vector/instagram-vector-social-media-icon-7-june-2021-bangkok-thailand_53876-136728.jpg?uid=R109476863&ga=GA1.1.419248122.1733400174&semt=ais_hybrid" fill="currentColor" viewBox="0 0 24 24" class="w-full h-full rounded-full text-gray-900"/>
+          <path d="M12 2C6.48 2 2 6.48 2 12c0 4.71 3.28 8.64 7.7 10.03.56.1.77-.24.77-.54 0-.26-.01-.95-.01-1.86-3.14.68-3.81-1.44-3.81-1.44-.51-1.29-.12-2.34-.12-2.34 1.23-.83 2.52-1.31 2.52-1.31.29-.83-.19-1.5-.92-1.76-.46-.18-.99-.14-1.5.23-.29.21-.56.53-.91.92-.06-.21-.25-.57-.62-.92-.48-.61-.89-1.36-.61-2.17-.26-.22-.48-.55-.68-.9-.36-.61-.79-.93-1.21-1.38-.64-.61-1.47-.76-2.12-.29-1.13-.29-1.52.45-2.21 1.02-.89-.48-1.72-.97-2.57-1.49-.08-.06-.16-.08-.24-.12 1.08-2.51 3.85-4.4 7.69-4.4 4.42 0 7.68 3.68 7.68 8.23 0 1.04-.33 2.04-.91 2.87-.87 1.2-2.5 2.28-4.75 2.75-.74.18-1.57-.25-2.12-.93-.26-.22-.47-.45-.69-.68-.24-.23-.42-.48-.64-.71-.31-.33-.59-.65-.91-.95-1.5-.84-1.69-2.79-.7-3.9.3-.56.83-.84 1.46-.72.29.13.63.34.94.51-.52 2.43-2.33 2.45-2.94 1.62-.07-.09-.13-.18-.21-.27-.06-.08-.13-.16-.19-.24.17-.42-.35-.76-.54-1.23-.45-.99.65-1.51 1.58-.58.18-.08.35-.19.56-.31-.37-.15-.58-.31-.97-.42z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+  
 
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon icon-1"
-            onclick="location.href='https://www.linkedin.com/in/saurabh-singh-rautela-90382a23b'" />
-          <img src="./assets/github.png" alt="My Github profile" class="icon"
-            onclick="location.href='https://github.com/saurabh11122001'" />
-        </div>
-      </div>
-    </section>
-    <section id="about" class="about-section">
-      <p class="ab section__text__p1">Get To Know More</p>
-      <h1 class="ab2 title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container pic-2">
-          <img src="./assets/second.png" alt="Profile picture" class="about-pic" />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-              <h3>Experience</h3>
-              <p>1+ years <br />Backend Development</p>
-              <p>& Aspiring Machine Learning </p>
-            </div>
-            <div class="details-container">
-              <img src="./assets/education.png" alt="Education icon" class="icon" />
-              <h3>Education</h3>
-              <p>B.C.A Bachelors Degree<br />M.C.A Masters Degree</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p class="para">
-              "Hi, I'm Saurabh, a passionate and dedicated Backend Developer with a knack for creating innovative
-              solutions.
-              "I began my journey in Web Development and Machine Learning with a strong interest in Backend Development
-              .
-          </div>
+  <section id="about" class="bg-dark py-16 px-4 lg:h-screen md:px-16">
+    <div class="container mx-auto text-center lg:border lg:border-gray-700 lg:rounded-md lg:p-2">
+      <h2 class="text-4xl font-bold text-cyan-400 mb-8">About Me</h2>
+      <p class="text-lg text-gray-300 mb-8">Hello! I'm Saurabh, a passionate developer with a love for problem-solving and technology. Here's a bit about my journey.</p>
+      
+      <!-- Current Status Section -->
+      <div class="flex justify-center mb-8">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+          <h3 class="text-3xl font-bold text-white mb-4">Current Status</h3>
+          <p class="text-lg text-gray-300">Currently, I am focused on enhancing my skills in Ai/ML and contributing to open-source projects. I'm excited about taking on new challenges and expanding my knowledge to merge Machine Learning with Web Development.</p>
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-    </section>
-    <section id="experience" class="experience-sec">
-      <p class="ex1 section__text__p1">Explore My</p>
-      <h1 class="ex2 title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article class="article-icons">
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>ReactJs</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>Tailwind</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
+  
+      <!-- Education Sections -->
+      <div class="flex flex-col md:flex-row justify-center gap-16">
+        <!-- Schooling Section -->
+        <div class="flex justify-center mb-8">
+          <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+            <center><div class="flex justify-center items-center w-24 h-24 bg-cyan-400 rounded-full mb-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Vivekanada.jpg/243px-Vivekanada.jpg" class="w-full h-full rounded-full object-cover" alt="">
+            </div></center>
+            <h4 class="text-xl font-medium text-white mb-2">Schooling</h4>
+            <p class="text-lg text-gray-300">I completed my schooling from <strong>Vivekananda Vidhyamandir Ranikhet</strong>, where I developed a deep interest in technology and problem-solving.</p>
           </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>MySql</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
-                <div class="points">
-                  <h3>MongoDb</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+        </div>
+  
+        <!-- Graduation Section -->
+        <div class="flex justify-center mb-8">
+          <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+            <center><div class="flex justify-center items-center w-24 h-24 bg-cyan-400 rounded-full mb-4">
+              <img src="https://media.licdn.com/dms/image/v2/C4E1BAQHAByyGBsamEg/company-background_10000/company-background_10000/0/1634197955444/kumaununiversity_cover?e=2147483647&v=beta&t=4kmqf-yyoB9u02ZgeSb82aMp5gMwlwyuLR1-bUcAPAo" class="w-full h-full rounded-full object-cover" alt="">
+            </div></center>
+            <h4 class="text-xl font-medium text-white mb-2">Graduation</h4>
+            <p class="text-lg text-gray-300">I pursued my graduation from <strong>D.S.B Campus Nainital, Kumaun University</strong> in BCA, where I further honed my skills in Web Development.</p>
+          </div>
+        </div>
+  
+        <!-- Masters Section -->
+        <div class="flex justify-center mb-8">
+          <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+            <center><div class="flex justify-center items-center w-24 h-24 bg-cyan-400 rounded-full mb-4">
+              <img src="https://colleges18.s3.ap-south-1.amazonaws.com/medium_Birla_Institute_of_Applied_Sciences_BIAS_Bhimtal_2_1a6eb3f399.jpg" class="w-full h-full rounded-full object-cover" alt="">
+            </div></center>
+            <h4 class="text-xl font-medium text-white mb-2">Masters</h4>
+            <p class="text-lg text-gray-300">I completed my Masters from <strong>Birla Institute of Applied Sciences Bhimtal, Uttarakhand Technical University Dehradun</strong> specializing in MCA, which allowed me to dive deeper into MERN Stack.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
 
-            </div>
-          </div>
-        </div>
+  <section id="skills" class="relative flex flex-col items-center justify-center lg:h-screen lg:py-20 lg:mt-36">
+    <!-- Skills Section -->
+    <h2 class="text-4xl font-bold text-cyan-400 text-center mb-12">Skills</h2>
+    <div class="flex flex-wrap justify-center gap-8 mb-16">
+      <!-- Skill Circle -->
+      <div class="group bg-gray-800 text-white flex flex-col items-center justify-center w-24 h-24 lg:w-28 lg:h-28 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-cyan-400">
+        <h3 class="text-sm lg:text-lg font-semibold text-center mb-1">JavaScript</h3>
+        <p class="text-xs text-center hidden group-hover:block">ES6+, React, Node.js</p>
       </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-    </section>
-    <section id="projects" class="project-section">
-      <p class="pro1 section__text__p1">Browse My Recent</p>
-      <h1 class="pro2 title">Projects</h1>
-      <div class="experience-details-container project">
-        <div class="about-containers about-3 ">
-          <div class="details-container pro-1 color-container">
-            <div class="article-container">
-              <img src="./assets/Project1.png" alt="Project 1" class="project-img" />
-              <div class="project-title1">
-                <span>Chat Web Application</span>
-              </div>
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn button-project"
-                onclick="location.href='https://github.com/saurabh11122001'">
-                Github
-              </button>
-              <button class="btn btn-color-2 project-btn button-project" onclick="">
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container pro-2 color-container">
-            <div class="article-container">
-              <img src="./assets/project2.png" alt="Project 2" class="project-img" />
-              <div class="project-title1">
-                <span>Tinder Frontend for Phone</span>
-              </div>
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-                Github
-              </button>
-              <button class="btn btn-color-2 project-btn"
-                onclick="location.href='https://saurabh11122001.github.io/Tinder/'">
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container pro-3 color-container">
-            <div class="article-container title2">
-              <img src="https://tse2.mm.bing.net/th?id=OIP.I5kOxO8XFe7kqshCQXOzEAHaFy&pid=Api&P=0&h=180" alt="Project 2" class="project-img" />
-              <div class="project-title2">
-                <span>News Web Application</span>
-              </div>
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-                Github
-              </button>
-              <button class="btn btn-color-2 project-btn"
-                onclick="location.href='https://saurabh11122001.github.io/Tinder/'">
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container pro-4 color-container">
-            <div class="article-container title2">
-              <img src="https://tse2.mm.bing.net/th?id=OIP.b9dt18HWmPVvdawZjae_qQHaHa&pid=Api&P=0&h=180" alt="Project 2" class="project-img" />
-              <div class="project-title2">
-                <span>Health Expectancy Prediction-ML</span>
-              </div>
-            </div>
-            <h2 class="experience-sub-title project-title">Project Four</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-                Github
-              </button>
-              <button class="btn btn-color-2 project-btn"
-                onclick="location.href='https://saurabh11122001.github.io/Tinder/'">
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
+      <!-- Repeat for Other Skills -->
+      <div class="group bg-gray-800 text-white flex flex-col items-center justify-center w-24 h-24 lg:w-28 lg:h-28 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-cyan-400">
+        <h3 class="text-sm lg:text-lg font-semibold text-center mb-1">CSS</h3>
+        <p class="text-xs text-center hidden group-hover:block">CSS and Tailwind CSS</p>
       </div>
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-    </section>
-    <section id="contact" class="contact">
-      <p class="con1 section__text__p1">Get in Touch</p>
-      <h1 class="con2 title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-          <p><a href="mailto:saurabhrautela2001@gmail.com">saurabhrautela2001@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-          <p><a href="https://www.linkedin.com/in/saurabh-singh-rautela-90382a23b">LinkedIn</a></p>
-        </div>
+      <div class="group bg-gray-800 text-white flex flex-col items-center justify-center w-24 h-24 lg:w-28 lg:h-28 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-cyan-400">
+        <h3 class="text-sm lg:text-lg font-semibold text-center mb-1">React</h3>
+        <p class="text-xs text-center hidden group-hover:block">Dynamic UIs with React</p>
       </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+      <div class="group bg-gray-800 text-white flex flex-col items-center justify-center w-24 h-24 lg:w-28 lg:h-28 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-cyan-400">
+        <h3 class="text-sm lg:text-lg font-semibold text-center mb-1">Node.js</h3>
+        <p class="text-xs text-center hidden group-hover:block">Back-end with Node.js</p>
+      </div>
+      <div class="group bg-gray-800 text-white flex flex-col items-center justify-center w-24 h-24 lg:w-28 lg:h-28 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-cyan-400">
+        <h3 class="text-sm lg:text-lg font-semibold text-center mb-1">MongoDB</h3>
+        <p class="text-xs text-center hidden group-hover:block">Nosql database with MongoDB</p>
+      </div>
+      <div class="group bg-gray-800 text-white flex flex-col items-center justify-center w-24 h-24 lg:w-28 lg:h-28 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-cyan-400">
+        <h3 class="text-sm lg:text-lg font-semibold text-center mb-1">Mysql</h3>
+        <p class="text-xs text-center hidden group-hover:block">Mysql database with Mysql</p>
+      </div>
+      <div class="group bg-gray-800 text-white flex flex-col items-center justify-center w-24 h-24 lg:w-28 lg:h-28 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-cyan-400">
+        <h3 class="text-sm lg:text-lg font-semibold text-center mb-1">GSAP</h3>
+        <p class="text-xs text-center hidden group-hover:block">animation with GSAP</p>
+      </div>
+      <div class="group bg-gray-800 text-white flex flex-col items-center justify-center w-24 h-24 lg:w-28 lg:h-28 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-cyan-400">
+        <h3 class="text-sm lg:text-lg font-semibold text-center mb-1">Python</h3>
+      </div>
+    </div>
+  
+    <!-- Tools Section -->
+    <h2 class="text-3xl font-bold text-cyan-400 text-center mb-12">Tools</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Tool Card -->
+      <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-cyan-400">
+        <h3 class="text-xl font-semibold text-center mb-3">VS Code</h3>
+        <p class="text-center text-sm">Code editor for development</p>
+      </div>
+      <!-- Repeat for Other Tools -->
+      <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-cyan-400">
+        <h3 class="text-xl font-semibold text-center mb-3">Git</h3>
+        <p class="text-center text-sm">Version control system</p>
+      </div>
+      <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-cyan-400">
+        <h3 class="text-xl font-semibold text-center mb-3">Thunderclient</h3>
+        <p class="text-center text-sm">API testing and development</p>
+      </div>
+      <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-cyan-400">
+        <h3 class="text-xl font-semibold text-center mb-3">Figma</h3>
+        <p class="text-center text-sm">Design and prototyping</p>
+      </div>
+      <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-cyan-400">
+        <h3 class="text-xl font-semibold text-center mb-3">Git</h3>
+        <p class="text-center text-sm">Git for managing code locally</p>
+      </div>
+      <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-cyan-400">
+        <h3 class="text-xl font-semibold text-center mb-3">GitHub</h3>
+        <p class="text-center text-sm">Code repository hosting</p>
+      </div>
+      <div class="bg-gray-800 text-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-cyan-400">
+        <h3 class="text-xl font-semibold text-center mb-3">Anaconda</h3>
+        <p class="text-center text-sm">For making ML models</p>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-cyan-400 mb-8 text-center">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+          <img src="https://static.vecteezy.com/system/resources/previews/011/401/355/non_2x/job-finder-logo-vector.jpg" alt="Job Finder Web App" class="rounded mb-4 w-full h-48 object-cover">
+          <h3 class="text-xl font-bold mb-2">Job Finder Web App</h3>
+          <p class="text-gray-300 mb-4">A full-stack job finder web application built using React, Node.js, and MongoDB.</p>
+          <a href="https://github.com/saurabh11122001/JobFinder" target="_blank" class="block text-center bg-cyan-500 text-white font-semibold py-2 px-4 rounded hover:bg-cyan-600 transition">Get</a>
         </div>
-      </nav>
-      <p>Copyright &#169; 2024 @srautela. All Rights Reserved.</p>
-    </footer>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+          <img src="https://bernardmarr.com/wp-content/uploads/2022/02/What-Is-Social-Media-2.0-Simple-Explanation-And-Examples.jpg" alt="MeetMe Project" class="rounded mb-4 w-full h-48 object-cover">
+          <h3 class="text-xl font-bold mb-2">MeetMe</h3>
+          <p class="text-gray-300 mb-4">A MERN stack Social Media Web application where users can do chat in real time</p>
+          <a href="https://github.com/saurabh11122001/MeetMe" target="_blank" class="block text-center bg-cyan-500 text-white font-semibold py-2 px-4 rounded hover:bg-cyan-600 transition">Get</a>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+          <img src="https://cdn.scopicsoftware.com/wp-content/uploads/2019/04/chat-app-1.jpg" alt="Chat App" class="rounded mb-4 w-full h-48 object-cover">
+          <h3 class="text-xl font-bold mb-2">Chat App</h3>
+          <p class="text-gray-300 mb-4">A Chat application named Rapid Chat using React and Firebase.</p>
+          <a href="https://github.com/saurabh11122001/RapidChat" target="_blank" class="block text-center bg-cyan-500 text-white font-semibold py-2 px-4 rounded hover:bg-cyan-600 transition">Get</a>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="https://www.bleepstatic.com/content/hl-images/2021/06/18/tinder_bg_2.png" alt="Job Finder Web App" class="rounded mb-4 w-full h-48 object-cover">
+            <h3 class="text-xl font-bold mb-2">Tinder Frontend</h3>
+            <p class="text-gray-300 mb-4">A Frontend of Tinder using HTML , CSS , JavaScript.</p>
+            <a href="https://github.com/saurabh11122001/Tinder" target="_blank" class="block text-center bg-cyan-500 text-white font-semibold py-2 px-4 rounded hover:bg-cyan-600 transition">Get</a>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="https://static01.nyt.com/images/2021/06/14/business/13bizsky-ontech-print/08OnTech-YouTube-superJumbo.jpg" alt="MeetMe Project" class="rounded mb-4 w-full h-48 object-cover">
+            <h3 class="text-xl font-bold mb-2">Youtube Clone</h3>
+            <p class="text-gray-300 mb-4">A Youtube clone using React and OpenApi</p>
+            <a href="https://github.com/saurabh11122001/youtube-clone" target="_blank" class="block text-center bg-cyan-500 text-white font-semibold py-2 px-4 rounded hover:bg-cyan-600 transition">Get</a>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="https://img.freepik.com/premium-vector/black-white-logo-news-app_65335-1368.jpg?semt=ais_hybrid" alt="Chat App" class="rounded mb-4 w-full h-48 object-cover">
+            <h3 class="text-xl font-bold mb-2">News App</h3>
+            <p class="text-gray-300 mb-4">A News Web application named Gorilla News using React and Free news Api.</p>
+            <a href="https://github.com/saurabh11122001/News-App" target="_blank" class="block text-center bg-cyan-500 text-white font-semibold py-2 px-4 rounded hover:bg-cyan-600 transition">Get</a>
+          </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="my-12">
+    <h2 class="text-4xl font-bold text-center text-cyan-400 mb-6">Contact Me</h2>
+    <form class="max-w-xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+      <div class="mb-4">
+        <label for="name" class="block text-lg font-semibold text-cyan-400">Name</label>
+        <input type="text" id="name" name="name" class="w-full bg-gray-700 p-3 outline-none border-none rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-lg font-semibold text-cyan-400">Email</label>
+        <input type="email" id="email" name="email" class="w-full bg-gray-700 p-3 outline-none border-none  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required />
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-lg font-semibold text-cyan-400">Message</label>
+        <textarea id="message" name="message" rows="4" class="w-full p-3 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+      </div>
+      <button type="submit" class="w-full py-3 bg-blue-500 text-white text-lg font-semibold rounded-md hover:bg-blue-600 transition">Send Message</button>
+    </form>
+  </section>
+
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    menuToggle.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+    });
+
+    // Close menu when clicking outside the menu or hamburger
+    document.addEventListener("click", (event) => {
+      if (!menuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
+        mobileNav.classList.remove("open");
+      }
+    });
+  </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
     integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
     integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
-  </div>
+    <script src="animation.js"></script>
 </body>
-
 </html>
